@@ -60,7 +60,7 @@ Oyunun farklı aşamalarından ekran görüntüleri aşağıdadır:
 
 ## Projeye Dair Önemli Notlar
 
-- Oyun, Chrome, Safari ve Firefox tarayıcılarında test edilmiştir ve sorunsuz çalışmaktadır.  
+- Oyun; Chrome, Safari ve Firefox tarayıcılarında test edilmiştir ve sorunsuz çalışmaktadır.  
 - Oyun geliştirilirken herhangi bir hazır JS oyun kütüphanesi kullanılmamıştır.  
 - Kullanılan görseller ve ses dosyalarının linklerine buradan ulaşılabilir: [arka plan müziği](https://youtu.be/o5Csf-XrXdY?feature=shared) - [doğru/yanlış bildirim sesi](https://www.youtube.com/watch?v=worclOeTALw)
 - Kodlar içerisinde Türkçe ve açıklayıcı yorumlar bulunmaktadır.  
