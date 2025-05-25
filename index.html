@@ -258,7 +258,6 @@
 </head>
 
 <body>
-    <!-- Nasıl oynanır penceresi, başlangıçta gizlidir butona basıldığında pencere gözükür-->
     <div id="kurallarPenceresi" style="display: none;" class="modal">
         <div class="modal-icerik">
             <!-- Pencereyi kapatma butonu -->
@@ -271,7 +270,6 @@
         </div>
     </div>
 
-    <!-- Oyun alanı, başlangıçta gizlidir butona basınca gözükür -->
     <section class="container" style="display: none;">
         <h2>ÇİZ BAKALIM</h2>
         <!-- Üst alanda yönergeler, skor, süre ve ses kontrol bulunur-->
@@ -388,7 +386,7 @@
 
         window.addEventListener('resize', canvasAyarla);
 
-        // Oyun başlatıldığında gerekli hazırlıklar
+        // Oyun başlatıldığında gerekli hazırlıklar yapılır
         function oyunuBaslat() {
             container.style.display = 'flex';
             toplamPuan = 0;
@@ -441,21 +439,21 @@
         };
 
         // Çizim işlemleri
-        canvas.onmousedown = function (e) {
-            ciziyor = true;
-            ctx.beginPath();
-            ctx.moveTo(e.offsetX, e.offsetY);
+        canvas.onmousedown = function (e) { //Oyuncu canvasa mouse ile bastığında çalışır
+            ciziyor = true; //Kullanıcının çizime başladığını belirtir
+            ctx.beginPath(); //Bağımsız yeni bir çizgi çizer
+            ctx.moveTo(e.offsetX, e.offsetY); //Mouseun tıklandığı yerden çizimi başlatır
         };
 
-        canvas.onmouseup = function () {
-            ciziyor = false;
-            ctx.beginPath();
+        canvas.onmouseup = function () { //mouseu bıraktığında çalışır
+            ciziyor = false; //Çizim biter
+            ctx.beginPath(); //Çizim yolu sıfırlanır
         };
 
         canvas.onmousemove = function (e) {
-            if (!ciziyor) return;
-            ctx.lineTo(e.offsetX, e.offsetY);
-            ctx.stroke();
+            if (!ciziyor) return; //mousea yıklanıp tıklanmadığı kontrol edilir
+            ctx.lineTo(e.offsetX, e.offsetY); //mouseun bulunduğu konuma çizgi çeker
+            ctx.stroke(); //çizgi ekrana çizilir
         };
 
         // Yönerge kontrolü
